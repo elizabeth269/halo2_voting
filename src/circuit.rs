@@ -1,4 +1,3 @@
-// src/circuit.rs
 use halo2_proofs::{
     arithmetic::FieldExt,
     circuit::{AssignedCell, Chip, Layouter, SimpleFloorPlanner},
