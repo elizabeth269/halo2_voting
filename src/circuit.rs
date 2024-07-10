@@ -39,7 +39,7 @@ impl<F: Field> Circuit<F> for VoteCircuit<F> {
         ()
     }
 
-    fn synthesize(&self, cs: &mut impl Layouter<F>, _: Self::Config) -> Result<(), Error> {
+    fn synthesize(&self, cs: impl Layouter<F>, _: Self::Config) -> Result<(), Error> {
         cs.assign_region(
             || "assign vote",
             |mut region| {
