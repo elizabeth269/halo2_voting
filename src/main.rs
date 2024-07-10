@@ -6,8 +6,8 @@ use halo2_proofs::{
     pasta::Fp,
     plonk::{create_proof, keygen_pk, keygen_vk, verify_proof, ProvingKey, VerifyingKey},
     poly::commitment::Params,
-    poly::commitment::ParamsProver,
-    transcript::{Blake2bWrite, Challenge255, TranscriptWriterBuffer},
+    poly::commitment::*,
+    transcript::{Blake2bWrite, Challenge255},
 };
 use rand::rngs::OsRng;
 
