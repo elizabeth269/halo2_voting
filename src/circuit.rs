@@ -31,7 +31,7 @@ impl<F: Field> Circuit<F> for VoteCircuit<F> {
 
         meta.create_gate("vote within range", |meta| {
             let vote = meta.query_advice(vote, Rotation::cur());
-            let max_votes = meta.query_fixed(max_votes, Rotation::cur());
+            let max_votes = meta.query_fixed(max_votes, /*Rotation::cur())*/)
 
             vec![vote.clone() * (vote - max_votes.clone())]
         });
