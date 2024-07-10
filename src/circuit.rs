@@ -6,7 +6,7 @@ use halo2_proofs::{
 };
 
 #[derive(Clone, Debug)]
-struct VoteCircuit<F: FieldExt> {
+pub struct VoteCircuit<F: FieldExt> {
     pub vote: Option<F>,
     pub max_votes: F,
 }
