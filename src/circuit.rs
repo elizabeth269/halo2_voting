@@ -1,17 +1,17 @@
 use halo2_proofs::{
-    arithmetic::FieldExt,
+    arithmetic::Field,
     circuit::{AssignedCell, Chip, Layouter, SimpleFloorPlanner},
     plonk::{Circuit, ConstraintSystem, Error},
     poly::Rotation,
 };
 
 #[derive(Clone, Debug)]
-pub struct VoteCircuit<F: FieldExt> {
+pub struct VoteCircuit<F: Field> {
     pub vote: Option<F>,
     pub max_votes: F,
 }
 
-impl<F: FieldExt> Circuit<F> for VoteCircuit<F> {
+impl<F: Field> Circuit<F> for VoteCircuit<F> {
     type Config = ();
     type FloorPlanner = SimpleFloorPlanner;
 
