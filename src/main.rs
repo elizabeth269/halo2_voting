@@ -22,7 +22,7 @@ fn main() {
     };
 
     // Generate proving and verifying keys
-    let params: Params<Fp> = Params::new(8);
+    let params: Blake2bparams<Fp> = Params::new(8);
     let vk = keygen_vk(&params, &circuit).expect("keygen_vk should not fail");
     let pk = keygen_pk(&params, vk.clone(), &circuit).expect("keygen_pk should not fail");
 
