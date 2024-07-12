@@ -5,7 +5,7 @@ use halo2_proofs::{
     dev::MockProver,
     pasta::Fp,
     plonk::{create_proof, keygen_pk, keygen_vk, verify_proof, ProvingKey, VerifyingKey},
-    poly::commitment::Params,
+    poly::commitment::Params::*,
     poly::commitment::*,
     transcript::{Blake2bWrite, Challenge255},
 };
